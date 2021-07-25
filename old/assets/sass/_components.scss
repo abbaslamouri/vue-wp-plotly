@@ -1,0 +1,401 @@
+ /*************************************************
+  ***************** SweetAlert 2 ******************
+  **************************************************/
+  .swal2-container {
+    z-index: 99999 !important;
+    .hint-popup {
+      margin:2rem 0;
+      font-size: 1rem !important;
+    }
+  }
+  
+  
+  
+.yrl_wp_plotly_charts {
+
+  /*************************************************
+  ***************************MISC.****************
+  **************************************************/
+  .hidden {
+    display:none !important;
+  }
+
+
+   /*************************************************
+  **********************ADMIN MESSAGE****************
+  **************************************************/
+  .admin-message {
+    background-color: rgba(#FFFFFF, 1);
+    border: 1px solid rgba($color_p_dark, 1);
+    padding: .5rem 1.5rem;
+    margin: 1rem 0;
+    font-size: 1rem;
+
+    &.error {
+      border-left: 5px solid rgba($color_danger, 1);
+    }
+
+    &.success {
+      border-left: 5px solid rgba($color_success, 1);
+    }
+  }
+  
+
+
+  /*************************************************
+  ***************************BUTTONS****************
+  **************************************************/
+  .btn {
+    background-color: rgba( $color_primary, 1 ) !important;
+    color: rgba( $color-p-light, 1 ) !important;
+
+    &-danger {
+      background-color:rgba( $color_danger, 1 ) !important;
+    }
+  }
+
+
+  #yrl_wp_plotly_charts__saveChart {
+    margin-top:2rem;
+    margin-left: .5rem;
+  }
+
+
+  
+
+
+ 
+
+
+  /*************************************************
+  ********************MAIN ACCORDION****************
+  **************************************************/
+  .accordion {
+
+    // .ac-trigger {
+    //   width: auto !important;
+    // }
+
+
+    // &__level-2 {
+    //   margin: .5rem 0;
+
+    //   .ac-trigger {
+    //     font-size: .8rem !important;
+    //   }
+    // }
+
+    // &__level-3 {
+    //   margin: .5rem 0;
+
+    //   .ac-trigger {
+    //     font-size: .7rem !important;
+    //   }
+    // }
+
+    .ac {
+
+      border: 1px solid $color-p-dark;
+      margin-bottom: 1px;
+
+      &-header {
+        background-color: rgba( $color_secondary,1 );
+      }
+
+      &-trigger {
+        color: rgba( $color_p_light,1 );
+        font-size: 0.8rem;
+      }
+
+      &-panel {
+        background-color: rgba( $color_p_medium, .4) ;
+        padding: 0 .5rem;
+
+        .accordion__level-2 {
+
+          .ac {
+
+            &-trigger {
+              font-size: 0.7rem;
+            }
+
+            &-panel {
+
+              .accordion__level-3 {
+
+                .ac {
+
+                  &-trigger {
+                    font-size: 0.6rem;
+                  }
+
+                  &-panel {
+                    
+                  }
+                }
+
+              }
+            }
+
+          }
+
+        }
+      
+      }
+
+      &-text {
+        font-size:.7rem;
+        margin:.5rem 0;
+        padding:0;
+        line-height: 1.4;      }
+    }
+
+    // &.is-active > .ac-header {
+    //   background-color: rgba( $color_secondary,.8);
+    // }
+  
+    // &.is-active > .ac-trigger {
+    //   color: rgba( $color_s_dark , 1 );
+    // }
+  }
+
+
+  /*************************************************
+  ************************FORM GROUP****************
+  **************************************************/
+  .form-group {
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1.9rem;
+    grid-template-rows: auto;
+    font-size:.6rem;
+
+
+    // select {
+    //   margin-right:0px;
+    //   option {
+    //     width:100%;
+
+    //   }
+    // }
+
+    &__btn {
+      grid-column: 1 / 2;
+    }
+
+    &__input {
+      grid-column: 1 / 4;
+      grid-row: 1 / 2;
+      font-family: inherit;
+      color:inherit;
+      padding: 0 1rem;
+      border-radius: 2px;
+      background-color: rgba(#FFFFFF, .8);
+      border:none;
+      border-bottom: 3px solid transparent;
+      display:block;
+      // line-height:10px !important;
+      // width:100%;
+
+      &:disabled {
+        background-color:rgba( $color_danger, .1);;
+      }
+
+      &.no-hint {
+        grid-column: 1 / 5;
+      }
+
+      &-checkbox {
+        grid-column: 1 / 2;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:1.9rem;
+        height:1.9rem;
+        justify-self: end;
+        margin-left:1.45rem;
+        margin-top:0;
+        border-bottom: none;
+
+        &:focus{
+          border-bottom: none;
+
+          &:invalid, &:valid{
+            border-bottom: none;
+          }
+
+        }
+      }
+
+      &-color {
+        width:3.8rem;
+        margin-left:1.45rem;
+        height:2rem;
+        grid-column: 1 / 2;
+        padding:0;
+
+        &:focus{
+          border-bottom: none;
+
+          &:invalid, &:valid{
+            border-bottom: none;
+          }
+
+        }
+
+      }
+
+
+
+      &:focus{
+        outline: none;
+        box-shadow: 0 .2rem .4rem rgba($color-black, .2);
+        border-bottom: 3px solid rgba( $color-success, 1 );
+
+        &:invalid {
+          border-bottom: 3px solid rgba($color-danger, 1);
+        }
+
+        &::-webkit-input-placeholder {
+          color:$color-grey-dark;
+        }
+
+      }
+
+    }
+
+    &__input:placeholder-shown + .form-group__label {
+      opacity:0;
+      visibility:hidden;
+      transform: translate(0,-1.95rem);
+    }
+
+    &__label{
+      grid-column: 1 / 5;
+      grid-row: 2 / 3;
+      font-weight:500;
+      margin-top:.1rem;
+      margin-left:1.45rem;
+      display:block;
+      transition: all .9s
+    }
+
+    &__tooltip {
+      grid-column: 4 / 5;
+      grid-row: 1 / 1;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+     
+      // margin: 0.5rem;
+      // border-radius: 50%;
+
+      &.fileUpload {
+        grid-column: 2 / 3;
+        justify-content: left;
+        margin-left: .5rem;
+      }
+
+     
+
+      &-ttCheckbox {
+        grid-column: 2 / 3;
+      }
+
+      &-ttColor {
+        grid-column: 2 / 3;
+      }
+
+      &-question-mark {
+        height:1.2rem;
+        width:1.2rem;
+        border-radius: 100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;     
+        cursor: pointer;
+        border: 1px solid rgba( $color-s-light, 1 ) ;
+      }
+
+      &-hint {
+        position: absolute;
+        visibility: hidden;
+      //   min-width: 310px;
+      //   max-width:100%;
+      //   font-size: .8rem;
+      //   background-color: rgba($color-s-dark,1);
+      //   color: #fff;
+      //   border-radius: 6px;
+      //   padding: 1rem;
+      //   bottom: 120%;
+      //   right:0;
+        opacity: 0;
+      //   transition: opacity 0.3s;
+      }
+    }
+
+  }
+
+  
+
+   /*************************************************
+  ************************CARD****************
+  **************************************************/
+
+  .card {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    border: 1px solid rgba( $color-s-dark, .8 );
+    margin:1rem;
+    // min-width:400px;
+    
+    .chart-container {
+      position: relative;
+
+      
+    }
+
+    &__heading {
+      text-align: center;
+      margin-bottom: .8rem;
+      font-size:.8rem;
+      color: #666;
+    }
+
+    &__footer {
+      display: flex;
+      padding: 1rem;
+      justify-content: space-between;
+      align-items: center;
+
+      .shortcode {
+        background-color: #ddd;
+        font-size: .7rem;
+        padding: 0.3rem .8rem;
+        border-radius: 3px;
+      }
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+        margin-right:1rem;
+
+        &.clone-chart-svg {
+          fill: rgba( $color_s_dark, 1 );
+          // margin-right: 1rem;
+        }
+
+        &.edit-chart-svg {
+          fill: rgba( $color_success, 1 );
+          // margin-right: 1rem;
+        }
+
+        &.delete-chart-svg {
+          fill: rgba( $color_danger, 1 );
+        }
+      }
+    }
+  }
+  
+}

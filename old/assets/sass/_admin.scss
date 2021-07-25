@@ -1,0 +1,216 @@
+.yrl_wp_plotly_charts {
+
+  margin:0;
+  padding:1rem;
+  position:relative;
+
+  .chart-library {
+
+    &__header {
+      display:flex;
+      align-items: center;
+      font-size: 1rem;
+      margin: .5rem 3rem;
+
+      .page-title {
+        font-size: 1.2rem
+      }
+
+      .btn {
+        margin-left:3rem;
+        cursor: pointer;
+      }
+      
+    }
+    
+    &__content {
+
+      position:relative;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(450px, 600px));
+      justify-content: center;
+      grid-gap: 1rem;
+      grid-column: 1 / span 2;
+      padding:2rem;
+      border: 1px solid grey;
+      margin-top: 2rem;
+      min-height:300px;
+
+      .loading-spinner {
+        position: absolute;
+        width: 7rem;
+        height: 7rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    
+      .loading {
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        font-family:inherit;
+      }
+
+      .no-charts {
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1rem;
+        font-weight: 700;
+        color: rgba($color_danger, 1);
+        line-height: 2rem;
+      }
+
+    }
+  }
+    
+  
+
+  .edit-chart {
+
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    z-index: 99999;
+    background-color: rgba($color_s_dark, .8);
+
+    &__content {
+
+      background-color: rgba(#FFF, 1);
+      margin:2rem;
+      padding:1rem;
+      height:88vh;
+      box-shadow: 0 .1rem .5rem .1rem rgba($color_p_dark, .2);
+    }
+
+    &__header {
+      display:flex;
+      align-items: center;
+      font-size: 1rem;
+      margin: .5rem 3rem;
+
+      .page-title {
+        font-size: 1.2rem
+      }
+
+      .btn {
+        margin-left:3rem;
+        cursor: pointer;
+      }
+      
+    }
+
+    &__body {
+      // min-height:400px;
+      display:grid;
+      grid-template-columns: 1fr minmax(400px,25%);
+      grid-gap: .5rem;
+      border-radius: 3px;
+      border: 1px solid rgba($color_p_dark, 1);
+      padding:.5rem;
+    }
+
+    
+
+    &__footer {
+      display:flex;
+      justify-content: center;
+      padding: 2rem 3rem;
+      background-color: rgba($color_p_dark, .5);
+    }
+
+    &__chart-view {
+      display:grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      padding: 1rem;
+      background-color: $color-grey-light;
+      border-radius: 3px;
+      border: 1px solid rgba($color_p_dark, 1);
+
+      .loading-spinner {
+        align-self: center;
+        justify-self: center;
+        width: 7rem;
+        height: 7rem;
+      }
+
+      .warning {
+        align-self: center;
+        justify-self: center;
+        font-size: 1rem;
+        font-weight: 700;
+        color: rgba($color_danger, 1);
+        line-height: 2rem;
+        // z-index: 99999;
+      }
+
+      // .plotly {
+
+      //   .min-max-avg-table {
+      //     font-size: 1rem;
+      //   }
+
+      // }
+
+    }
+
+    &__chart-options {
+      // position: absolute;
+      height:75vh;
+      overflow-y: auto;
+      border: 1px solid rgba($color_p_dark, 1);
+      padding: 0.5rem;
+      border-radius: 3px;
+
+      .field-group {
+
+        position:relative;
+        display:grid;
+        grid-template-rows: auto;
+        column-gap: 1.5em;
+        margin-bottom:1rem;
+
+        .form-group:first-child {
+          grid-column: 1 / 2;
+        }
+  
+        .form-group:nth-child(2) {
+          grid-column: 2 / 3;
+        }
+
+        &.fifty-fifty {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        &.twentyFive-seventyFive {
+          grid-template-columns: 1fr 3fr;
+        }
+
+        &.sixty-forty {
+          grid-template-columns: 3fr 2fr;
+        }
+
+        &.forty-sixty {
+          grid-template-columns: 2fr 3fr;
+        }
+
+        &.seventyFive-twentyFive {
+          grid-template-columns: 3fr 1fr;
+        }
+        
+      }
+
+    }
+
+  }
+
+
+}

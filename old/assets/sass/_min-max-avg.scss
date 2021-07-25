@@ -1,0 +1,48 @@
+.yrl_wp_plotly_charts {
+
+  .min-max-avg-form {
+    display:flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding:1rem;
+    background-color: rgba(#4f5b62, .1);
+    font-size: .9rem;
+
+    p {
+      margin-right:2rem;
+      color: #000A12;
+      font-size: 1rem;
+    }
+
+    .min-max-form-group{
+      display:flex;
+      flex-direction: column;
+      margin-left:1rem;
+    
+
+      &__label {
+        margin-bottom: .3rem;
+        margin-left: .2rem;
+        font-size: .8rem;
+        font-weight: 400;
+      }
+
+      &__input {
+        font-size:.8rem;
+        font-family: inherit;
+        color:inherit;
+        padding: .3rem 1.5rem;
+        border-radius: 2px;
+        background-color: rgba(#FFFFFF, .8);
+        border:none;
+        border-bottom: 3px solid transparent;
+        display:block;
+      }
+
+
+    }
+    
+  }
+
+}
