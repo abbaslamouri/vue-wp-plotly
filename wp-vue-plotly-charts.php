@@ -19,6 +19,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
+
 // Prohibit direct script loading.  ABSPATH returns site path with trailing slash (/home/yrlusc5/public_html/sandbox/)
 defined('ABSPATH') || die('No direct script access allowed!');
 
@@ -26,6 +27,8 @@ if (!function_exists("add_action")) {
   echo "Hi there!  I am simply a plugin, not much I can do when called directly";
   exit;
 }
+
+defined('YRL_WP_VUE_PLOTLY_FILE_URL') ? null : define('YRL_WP_VUE_PLOTLY_FILE_URL', __FILE__);
 
 // Define this plugin name (Interactive WP Plotly Charts)
 defined('YRL_WP_VUE_PLOTLY_NAME') ? null : define('YRL_WP_VUE_PLOTLY_NAME', 'Interactive WP Plotly Charts');
@@ -50,10 +53,19 @@ defined('YRL_WP_VUE_PLOTLY_PREFIX') ? null : define('YRL_WP_VUE_PLOTLY_PREFIX', 
 
 // Includes
 require_once plugin_dir_path(__FILE__). 'includes/Dashboard.php';
+require_once plugin_dir_path(__FILE__). 'includes/RestAPI.php';
 
 // Instantiate Dashboard class
 if ( class_exists( 'YRL_WP_VUE_PLOTLY\\Includes\\Dashboard' ) ) {
-  new YRL_WP_VUE_PLOTLY\Includes\Dashboard;
+  new YRL_WP_VUE_PLOTLY\Includes\Dashboard ();
 }
+
+
+
+
+
+
+
+
 
 

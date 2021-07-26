@@ -1,4 +1,10 @@
+const webpack = require('webpack')
 const path = require("path");
+
+  new webpack.DefinePlugin({
+        __VUE_OPTIONS_API__: false,
+        __VUE_PROD_DEVTOOLS__: false,
+      })
 
 
 
@@ -71,12 +77,12 @@ module.exports = {
     // Clean dist folder
     new CleanWebpackPlugin(),
 
-    new VueLoaderPlugin(
-      // new webpack.DefinePlugin({
-      //   __VUE_OPTIONS_API__: false,
-      //   __VUE_PROD_DEVTOOLS__: false,
-      // }),
-    ),
+    new VueLoaderPlugin(),
+
+    new webpack.DefinePlugin({
+      __VUE_OPTIONS_API__: true,
+      __VUE_PROD_DEVTOOLS__: false,
+    }),
 
 
 
