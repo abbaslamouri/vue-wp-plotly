@@ -1,0 +1,25 @@
+{
+  "name": "vue-wp-plotly-charts",
+  "version": "1.0.0",
+  "description": "Plotly charts using Wordpress and Vue 3",
+  "scripts": {
+    "dev": "webpack --watch"
+  },
+  "author": "Abbas Lamouri",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "@vue/compiler-sfc": "^3.1.5",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "*",
+    "css-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.1.0",
+    "webpack": "^5.46.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "vue": "^3.1.5",
+    "vue-loader": "^16.3.3"
+  }
+}
