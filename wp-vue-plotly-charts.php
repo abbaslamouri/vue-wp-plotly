@@ -53,6 +53,7 @@ defined('YRL_WP_VUE_PLOTLY_PREFIX') ? null : define('YRL_WP_VUE_PLOTLY_PREFIX', 
 
 // Includes
 require_once plugin_dir_path(__FILE__). 'includes/Dashboard.php';
+require_once plugin_dir_path(__FILE__). 'includes/AdminMenus.php';
 require_once plugin_dir_path(__FILE__). 'includes/RestAPI.php';
 
 // Instantiate Dashboard class

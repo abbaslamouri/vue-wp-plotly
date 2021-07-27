@@ -31,7 +31,7 @@ if (  yrl_wp_plotly_charts_obj ) {
   const shortcodeText = yrlPlotlyChartsObj.shortcodeText
   const wpRestUrl = yrlPlotlyChartsObj.wpRestUrl
   const wpRestNonce= yrlPlotlyChartsObj.wpRestNonce
-  const pluginUrl =yrlPlotlyChartsObj.url
+  const pluginUrl = yrlPlotlyChartsObj.url
 
   console.log("yrlPlotlyChartsObj", {...yrlPlotlyChartsObj})
   
