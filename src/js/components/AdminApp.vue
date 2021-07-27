@@ -7,7 +7,7 @@
   </div>
 
   <div id="nav">
-      <router-link to="/">Chart Library</router-link>
+      <router-link to="/wp-admin/admin.php?page=yrl_wp_vue_plotly_charts">Chart Library</router-link>
       <router-link to="/settings">Settings</router-link>
       <router-link to="/support">Support</router-link>
   </div>

@@ -5,19 +5,20 @@ import Support from "../views/Support.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/wp-admin/admin.php?page=yrl_wp_vue_plotly_charts",
     name: "Chart Library",
-    component: {default: ChartLibrary}
+    component: ChartLibrary,
+    redirect: '/'
   },
   {
     path: "/settings",
     name: "Settings",
-    component: {default: Settings}
+    component: Settings
   },
   {
     path: "/support",
     name: "Support",
-    component: {default: Support}
+    component: Support
   },
 ];
 

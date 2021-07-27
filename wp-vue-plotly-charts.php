@@ -31,7 +31,7 @@ if (!function_exists("add_action")) {
 defined('YRL_WP_VUE_PLOTLY_FILE_URL') ? null : define('YRL_WP_VUE_PLOTLY_FILE_URL', __FILE__);
 
 // Define this plugin name (Interactive WP Plotly Charts)
-defined('YRL_WP_VUE_PLOTLY_NAME') ? null : define('YRL_WP_VUE_PLOTLY_NAME', 'Interactive WP Plotly Charts');
+defined('YRL_WP_VUE_PLOTLY_NAME') ? null : define('YRL_WP_VUE_PLOTLY_NAME', 'Interactive WP Vue Plotly Charts');
 
 // Define this plugin directory PATH with trailing slashes (/home/yrlusc5/public_html/sandbox/wp-content/plugins/iwpgv/)
 defined('YRL_WP_VUE_PLOTLY_PATH') ? null : define('YRL_WP_VUE_PLOTLY_PATH', plugin_dir_path(__FILE__));

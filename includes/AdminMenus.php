@@ -1,7 +1,7 @@
 <?php
 
 /**
-* Interactive Vue WP Plotly Charts
+* Interactive Vue WP Vue Plotly Charts
 *
 * @package Interactive WP Vue Plotly Charts
 * @author Abbas Lamouri
@@ -46,7 +46,7 @@ if (!class_exists('AdminMenus')) {
 					'page_title' => __($this->name, $this->plugin), // Text to be displayed in the browser window.
 					'menu_title' => __($this->name, $this->plugin), // Text to be displayed for the menu
 					'caps' => 'administrator', // The capability required for this page to be displayed to the user.
-					'id' => "{$this->prefix}/", // Unique id for this menu
+					'id' => "{$this->prefix}", // Unique id for this menu
 					'callback' => function () {}, // Callback to output the menu (Handled by the first submenu in this case
 					'dashicon' => 'dashicons-chart-line', // icon url
 					'position' => '2', // menu position
@@ -71,17 +71,17 @@ if (!class_exists('AdminMenus')) {
 
 			return array(
 				array(
-					'parent_id' => "{$this->prefix}/", 
+					'parent_id' => "{$this->prefix}", 
 					'page_title' => __($this->name, $this->plugin), 
 					'menu_title' => __('Chart Library', $this->plugin), 
 					'caps' => 'administrator', 
-					'id' => "{$this->prefix}#/",
+					'id' => "{$this->prefix}",
 					'callback' => [$this, 'admin']
 				),
 
 				
 				array(
-					'parent_id' => "{$this->prefix}/", 
+					'parent_id' => "{$this->prefix}", 
 					'page_title' => __('Settings', $this->plugin), 
 					'menu_title' => __('Settings', $this->plugin), 
 					'caps' => 'administrator', 
@@ -90,7 +90,7 @@ if (!class_exists('AdminMenus')) {
         ),
         
         array(
-					'parent_id' => "{$this->prefix}/", 
+					'parent_id' => "{$this->prefix}", 
 					'page_title' => __('Support', $this->plugin), 
 					'menu_title' => __('Support', $this->plugin), 
 					'caps' => 'administrator', 
