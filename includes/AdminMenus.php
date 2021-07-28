@@ -85,7 +85,7 @@ if (!class_exists('AdminMenus')) {
 					'page_title' => __('Settings', $this->plugin), 
 					'menu_title' => __('Settings', $this->plugin), 
 					'caps' => 'administrator', 
-					'id' => "{$this->prefix}/settings", 
+					'id' => "{$this->prefix}#/settings", 
 					'callback' => [$this, 'admin'] 
         ),
         
@@ -94,7 +94,7 @@ if (!class_exists('AdminMenus')) {
 					'page_title' => __('Support', $this->plugin), 
 					'menu_title' => __('Support', $this->plugin), 
 					'caps' => 'administrator', 
-					'id' => "{$this->prefix}/support", 
+					'id' => "{$this->prefix}#/support", 
 					'callback' => [$this, 'admin']
 				),
 			);

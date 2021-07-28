@@ -1,3 +1,3 @@
 <template>
-  <h1>Chart Library</h1>
+  <h1>Chart Librarydddddd</h1>
 </template>

@@ -26,7 +26,7 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
-    // publicPath: ''
+    // publicPath: '/wp-admin/admin.php?page=yrl_wp_vue_plotly_charts/'
   },
 
   devtool: "inline-source-map",
